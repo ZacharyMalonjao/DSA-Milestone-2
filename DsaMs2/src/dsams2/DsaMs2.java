@@ -52,6 +52,8 @@ public class DsaMs2 {
                         String newDate = date.format(f);
                     //STOCK LABEL    
                     String newStockLabel = "New";
+                    //STATUS
+                    String newStatus = "On-hand";
                     //BRAND
                     String newBrand="";
                    while (true) {    
@@ -83,19 +85,8 @@ public class DsaMs2 {
                         
                         
                     
-                    //STATUS    
-                        String statusTest;
-                        String newStatus = "";
-                 while(true){         
-                     System.out.print("Insert Purchase Status: ");
-                        statusTest = sc.nextLine();
-                       if(statusTest.equals("On-hand") || statusTest.equals("Sold")){
-                           newStatus = statusTest;
-                           break;
-                       }else{
-                          System.out.println("Input is case-sensitive. Please input either 'On-hand' or 'Sold'. ");
-                       }                                                                       
-                 } 
+                  
+             
                 bst.insert(newId, newDate, newStockLabel, newBrand, newEngineNumber, newStatus); 
                 bst.displayBST();
                 bst.writeBSTtoCSV("inventory.csv");
