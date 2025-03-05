@@ -61,7 +61,7 @@ public class DsaMs2 {
                         newBrand = sc.nextLine().trim();  // Remove leading and trailing spaces
 
                         if (newBrand.isEmpty()) {
-                            System.out.println("Engine Number cannot be empty or just spaces. Please try again.");
+                            System.out.println("Brand cannot be empty or just spaces. Please try again.");
                             continue;  // Ask for input again
                         }else{
                             break;
